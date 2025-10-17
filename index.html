@@ -9,110 +9,131 @@
     body {
       margin: 0;
       height: 100vh;
+      background: linear-gradient(135deg, #FFF4CC, #FFF7E6);
+      font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #FFF4CC; /* 马卡龙黄 */
-      font-family: 'Poppins', sans-serif;
     }
 
-    .board {
+    .scene {
       width: 90%;
       max-width: 900px;
-      background: white;
+      height: 80vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
       border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      overflow: hidden;
-      padding: 40px 20px;
+      background: #FFDFA8; /* 马卡龙黄主色 */
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    h1 {
+    .card-content {
+      width: 92%;
+      height: 88%;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 20px;
+      padding: 2rem;
       text-align: center;
-      color: #444;
-      margin-bottom: 40px;
-      font-size: 2.8rem;
-      font-weight: 600;
-      text-shadow: 1px 1px 0 #fff;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.08);
+      overflow-y: auto;
     }
 
-    h1 span {
-      display: block;
-      font-size: 1.5rem;
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #444;
+    }
+
+    h3 {
+      font-size: 1.3rem;
       color: #777;
-      margin-top: 5px;
+      margin-bottom: 1.6rem;
     }
 
     table {
       width: 100%;
+      font-size: 1.4rem;
       border-collapse: collapse;
-      font-size: 1.6rem;
-    }
-
-    thead {
-      background: #FFE082;
-      color: #333;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     th, td {
-      padding: 18px 20px;
+      padding: 0.8rem;
+      border-bottom: 1px solid #e5e7eb;
       text-align: center;
     }
 
+    th {
+      background-color: rgba(255, 240, 180, 0.9);
+      color: #333;
+      font-weight: 600;
+    }
+
     tr:nth-child(even) {
-      background: #FFF9E6;
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     tr:nth-child(odd) {
-      background: #FFFFFF;
+      background-color: rgba(255, 255, 255, 0.5);
     }
 
     tr:hover {
-      background: #FFECB3;
-      transform: scale(1.01);
-      transition: 0.2s ease;
+      background-color: #FFF1B2;
+      transition: background 0.2s ease;
     }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-      table {
-        font-size: 1.2rem;
-      }
-      th, td {
-        padding: 12px;
-      }
+    @media(max-width: 800px){
+      .scene { width: 100vw; height: 80vh; }
+      .card { width: 90%; height: 90%; }
+      h2 { font-size: 1.5rem; }
+      table { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="board">
-    <h1>
-      积极参与奖
-      <span>Hadiah Peserta Aktif</span>
-    </h1>
-    <table>
-      <thead>
-        <tr>
-          <th>姓名<br><small>Nama</small></th>
-          <th>参加积分<br><small>Markah Sertai</small></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>William</td><td>885</td></tr>
-        <tr><td>Albert</td><td>475</td></tr>
-        <tr><td>Bunyau</td><td>464</td></tr>
-        <tr><td>Azim</td><td>316</td></tr>
-        <tr><td>Kuan</td><td>100</td></tr>
-        <tr><td>Ocean</td><td>85</td></tr>
-        <tr><td>Victor</td><td>61</td></tr>
-        <tr><td>Paing Soe</td><td>55</td></tr>
-        <tr><td>Terrence</td><td>30</td></tr>
-        <tr><td>Aung Thant</td><td>25</td></tr>
-        <tr><td>Matthew</td><td>20</td></tr>
-        <tr><td>Chay</td><td>10</td></tr>
-      </tbody>
-    </table>
+  <div class="scene">
+    <div class="card">
+      <div class="card-content">
+        <h2>积极参与奖</h2>
+        <h3>Hadiah Peserta Aktif</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>名次<br><small>No.</small></th>
+              <th>姓名<br><small>Nama</small></th>
+              <th>参加积分<br><small>Markah Sertai</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>William</td><td>885</td></tr>
+            <tr><td>2</td><td>Albert</td><td>475</td></tr>
+            <tr><td>3</td><td>Bunyau</td><td>464</td></tr>
+            <tr><td>4</td><td>Azim</td><td>316</td></tr>
+            <tr><td>5</td><td>Kuan</td><td>100</td></tr>
+            <tr><td>6</td><td>Ocean</td><td>85</td></tr>
+            <tr><td>7</td><td>Victor</td><td>61</td></tr>
+            <tr><td>8</td><td>Paing Soe</td><td>55</td></tr>
+            <tr><td>9</td><td>Terrence</td><td>30</td></tr>
+            <tr><td>10</td><td>Aung Thant</td><td>25</td></tr>
+            <tr><td>11</td><td>Matthew</td><td>20</td></tr>
+            <tr><td>12</td><td>Chay</td><td>10</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </body>
 </html>
+
